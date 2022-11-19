@@ -1,0 +1,18 @@
+@mixin text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin fAc{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin titleB {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vh;
+}

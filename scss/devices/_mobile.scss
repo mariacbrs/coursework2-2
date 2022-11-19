@@ -1,0 +1,444 @@
+@media (min-width:300px){
+
+    .services,
+    .portfolio,
+    .about,
+    .contact,
+    .faq{
+        > article span{
+            width: 20%;
+        }
+    }
+
+    h1,
+    h2,
+    h5,
+    h6,
+    p,
+    figure,
+    ul {
+        margin: 0;
+    }
+
+    ul{
+        padding-left: 0;
+    }
+
+    a:hover {
+        color: unset;
+    }
+
+    // header
+
+    header{
+        
+        > section > article{
+            padding-top: 2vh;
+            display: flex;
+        }
+        
+        article aside{
+            @include text;
+            font-size: 14px;
+            display: flex;
+            column-gap: 1vh;
+            width: 45%;
+        }
+
+        > section > aside{
+            justify-content: center;
+            display: flex;
+            column-gap: 2vh;
+            font-size: 14px;
+            padding-bottom: 1vh;
+        }
+
+        .sm a{
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 9%;
+            height: 4vh;
+            @include text;
+        }  
+    }
+
+    nav{
+        justify-content: space-between;
+        align-items: center;
+        height: 6vh;
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        
+        > h1{
+            font-weight: 700;
+            padding-left: 1vh;
+            
+        }
+
+        > ul{
+            display: none;
+        }
+    }
+
+    details{
+        width: 90%;
+        position: absolute;
+        text-align: right;
+        padding-left: 2.2vh;
+        row-gap: 2vh;
+        
+        summary{
+            color: $orange1;
+            font-size: 20px;
+            padding-left: 0;
+            font-weight: 800;
+        }
+        
+        > ul{
+            margin-top: 1.7vh;
+            position: absolute;
+            background-color: $orange1;
+            width: 100%;
+            @include fAc; 
+        }
+
+        li{
+            display: flex;
+            border-bottom: 1px solid rgb(204, 80, 35);
+        }
+        
+        a{
+            text-decoration: none;
+            color: white;
+            width: 100%;
+            padding: 2%;
+            text-align: left;
+        }
+
+        a:hover{
+            color: white;
+        }   
+    }
+
+    .title{
+        background-image: url(/img/pic1.jpg);
+        @include titleB;
+        
+        > section{
+            display: none;
+        }
+    }
+
+    // services
+
+    .services{
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+    
+        i, h3{
+            font-size: 21px;
+        }  
+    }
+
+    .two{
+        @include fAc;
+        row-gap: 3vh;
+        align-items: center;
+        justify-content: center;
+        
+        > article{
+            width: 90%;
+        }
+
+        aside{
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            display: flex;
+            column-gap: 3vh;
+        }
+
+        h3{
+            text-transform: uppercase;
+            color: $servicesH3;
+            font-weight: 600;
+        }
+
+        p{
+            color: gray;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        a{
+            color: $aBlue;
+        } 
+    }
+
+    // portfolio
+
+    .portfolio{
+        background-color: $portfolioGray;
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+
+        h2{
+            color: white;
+        }
+
+        > section{
+            padding-top: 3vh;
+            @include fAc;
+            row-gap: 3vh;
+        
+        }
+
+        figure{ 
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        img{
+            width: 90%;
+        }
+
+        figcaption{
+            display: none;
+        }
+    }
+    
+    // about us
+    
+    .about{
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+        
+        > section{
+            width: 95%;
+            padding-left: 5%;
+            @include fAc;
+            row-gap: 8vh;   
+        }
+        
+        h5{
+            color: $servicesH3;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        li{
+            width: 100%;
+            height: 3.5vh;
+            display: flex;
+            list-style-type: none;
+            background-color: gainsboro;
+        }
+        
+        li:nth-child(1) > small {
+            width: 90%
+        }
+        li:nth-child(2) > small {
+            width: 75%
+        }
+        li:nth-child(3) > small {
+            width: 85%
+        }
+        li:nth-child(4) > small {
+            width: 95%
+        }  
+    }
+
+    
+    .first{
+        @include fAc;
+        row-gap: 4vh;
+        // padding-bottom: 2vh;
+        
+        aside{
+            @include fAc;
+            row-gap: 2vh;
+            
+            > p{
+                color: gray; 
+            } 
+        } 
+        
+        small {
+            background-color: $orange1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            
+        }
+        
+        article{
+            @include fAc;
+            row-gap: 2vh;
+            
+            ul{
+               @include fAc;
+                row-gap: 2vh;
+            } 
+        }  
+    }
+    
+    .last{
+        @include fAc;
+        @include text;
+        row-gap: 5vh;
+
+        > article{
+            border: 2px solid lightgray;
+            width: 95%;
+            background-color: $aside;
+        }
+        
+        figcaption{
+            display: none;
+        }
+
+        aside{
+            text-align: left;
+            padding-left: 5%;
+            @include fAc;
+            row-gap: 2vh;
+            color: gray;
+
+            > h6{
+                padding-top: 2vh;
+                color: $orange1;
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            > p{
+                font-size: 14px;
+                line-height: 1.5;
+                width: 97%;
+                padding-bottom: 3vh;
+            }
+        }
+    }
+    
+    // contact
+
+    .contact{
+        padding-bottom: 15vh;
+
+        > section{
+            width: 95%;
+            padding-left: 5%;
+            @include fAc;
+            row-gap: 7vh; 
+
+            section{
+                @include fAc;
+                row-gap: 3vh; 
+            }
+        }
+        
+        h6{
+            color: $portfolioGray;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .left > input{
+            color: white;
+            height: 5vh;
+            border: none;
+            width: 40%;
+            background-color: $orange1;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        form{
+           @include fAc;
+           row-gap: 1vh;
+
+           input{
+                height: 4vh;
+                border: 1px solid $input;
+           }
+
+           textarea{
+              resize: none;
+              border: 1px solid $input;
+              height: 15vh;
+           }
+
+           label{
+             font-size: 12px;
+             padding-top: 1vh;
+             color: gray;
+             font-weight: 500;
+           }
+        }
+
+        iframe{
+            height: 30vh;
+            border: 0;
+        }
+
+        p,
+        a,
+        address{
+            color:gray;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    // faq
+
+    .faq{
+        row-gap: 8vh;
+        padding-bottom: 10vh;    
+    }
+    
+    .accordion{
+        width: 97%;
+        padding-left: 3%;
+    }
+
+    .accordion-button {
+        color: $servicesH3;
+    }    
+    .accordion-button:not(.collapsed) {
+        color:black;
+        background-color: $faq;
+        box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+    }
+    
+    // footer
+
+    footer{
+        padding-top: 3vh;
+        padding-bottom: 2vh;
+        font-size: 14px;
+        @include fAc;
+        row-gap: 1vh;   
+        
+        p{
+            width: 97%;
+            padding-left: 3%;
+        }
+
+        > aside{
+            @include fAc;
+            align-items: flex-end;
+            width: 93%;
+
+        }
+
+        i{
+            width: 13%;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+}
+
+header{
+    > section{
+        background-color: $orange1;
+        color: white;
+    }
+
+    > section a{
+        color: white;
+    }
+
+    > aside{
+        background-color: white;
+    }
+}
+
+nav{
+    > h1{
+        color: $orange1;
+    }
+
+}
+
+.services,
+.about,
+.contact,
+.faq{
+    > article > h2{
+        color: $servicesH3;
+    }
+}
+
+.services,
+.portfolio,
+.about,
+.contact,
+.faq{
+
+    @include fAc;
+    row-gap: 6vh;
+
+    > article{
+        @include fAc;
+        align-items: center;
+        row-gap: 1.5vh;
+
+        > h2{
+            font-weight: 400;
+            font-size: 28px;
+        }
+    }
+
+    > article span{
+        height: 4px;
+        border:1px solid $orange1;
+        background-color: $orange1;
+    }
+}
+
+.services,
+.contact{
+    aside{
+        display: flex;
+        column-gap: 1vh;
+        align-items: center;
+        
+    }
+    aside i{
+        color: $orange1;
+    }
+
+    aside h3{
+        margin:0;
+    }
+
+    address{
+        margin: 0;
+    }
+}
+
+footer{
+    background-color: $orange1;
+    color: white;
+
+    a{
+        color: white;
+    }
+
+}
